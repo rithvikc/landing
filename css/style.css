@@ -1,6 +1,6 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;1,300&display=swap');
 /* Fontawesome */
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 /*Buttons*/
@@ -8,30 +8,49 @@
 /* Utilities */
 body {
   margin: 0;
-  font-family: Open Sans;
+  font-family: jost
 }
 
 h1, h2, h3, h4 {
-  font-family: Poppins;
+  font-family:jost;
 }
 
 a {
   text-decoration: none;
 }
-/*@2media quieries*/
-@media (min-width: 992px)
-.container {
-    max-width: 960px
+
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+  justify-content: space-evenly;
+
+
+}
+
+@media (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  @media (min-width: 576px)
-.container {
-    max-width: 540px;
+}
+/* Remove extra left and right margins, due to padding */
+.row {margin: 55px;
+justify-content: space-around;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Custom design below! */
 .container {
-  width: 900px;
-  margin: auto;
+  margin: 10px;
   text-align: center;
 }
 
@@ -60,9 +79,9 @@ a {
 }
 
 .card img {
-  height: 100px;
-  width: 100px;
-  background-size:cover;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
 }
 
 .card p {
@@ -70,7 +89,7 @@ a {
 }
 
 .card {
-  width: 200px;
+
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
@@ -80,8 +99,7 @@ a {
 }
 
 .cards {
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 30px;
 
 }
